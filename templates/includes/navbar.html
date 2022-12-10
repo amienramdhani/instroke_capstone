@@ -1,0 +1,58 @@
+<header>
+  <!-- navbar -->
+  <section class="navbar-area">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-logo" href="{{ url_for('home') }}">
+              <h2>Instroke</h2>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTwo"
+              aria-controls="navbarTwo"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="page-scroll" href="{{ url_for('home') }}"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="{{ url_for('bmi') }}">BMI</a>
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="{{ url_for('predictive') }}"
+                    >Stroke Prediction</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="page-scroll" href="{{ url_for('xray') }}"
+                    >Xray-Scan-Pneumonia</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- END nav-->
+        </div>
+        <!-- END col-->
+      </div>
+      <!-- END row-->
+    </div>
+    <!-- END container-->
+  </section>
+  <!-- END navbar -->
+</header>

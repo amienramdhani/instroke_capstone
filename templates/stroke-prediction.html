@@ -1,0 +1,140 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Instroke{% endblock %}
+
+{% block content %}
+
+    <main>
+      <section class="bmi-section" id="bmi-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="title">Stroke Prediction</h1>
+              <p>
+                Stroke merupakan keadaan darurat medis. Gejala stroke yaitu
+                sulit berjalan, berbicara, dan memahami, serta kelumpuhan atau
+                mati rasa pada wajah, lengan, atau tungkai. Penanganan dini
+                dengan obat-obatan seperti tPA (penghancur gumpalan darah) dapat
+                meminimalkan kerusakan otak. Pengobatan lain berfokus dalam
+                membatasi komplikasi dan mencegah stroke lainnya.
+              </p>
+              <form action="/predictive" method="POST">
+                <div class="form-group">
+                  <label for="hipertensi">Jenis Kelamin</label>
+                  <select class="custom-select" id="gender" name="gender">
+                    <option selected>-- Pilih Jenis Kelamin --</option>
+                    <option value="Male">Laki-Laki</option>
+                    <option value="Female">Perempuan</option>
+                    <option value="Other">Lainnya</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="usia">Usia</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="age"
+                    name="age"
+                    placeholder="tahun"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="hipertensi">Hipertensi</label>
+                  <select
+                    class="custom-select"
+                    id="hypertension"
+                    name="hypertension"
+                  >
+                    <option selected>-- Pilih Status Hypertension --</option>
+                    <option value="1">Iya</option>
+                    <option value="0">Tidak</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="hipertensi">Riwayat Penyakit Jantung</label>
+                  <select class="custom-select" id="disease" name="disease">
+                    <option selected>
+                      -- Pernah Mengalami Penyakit Jantung? --
+                    </option>
+                    <option value="1">Iya</option>
+                    <option value="0">Tidak</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="hipertensi">Riwayat Menikah</label>
+                  <select class="custom-select" id="married" name="married">
+                    <option selected>-- Status Menikah --</option>
+                    <option value="Yes">Iya</option>
+                    <option value="No">Tidak</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="hipertensi">Jenis Pekerjaan</label>
+                  <select class="custom-select" id="work" name="work">
+                    <option selected>-- Pilih Jenis Pekerjaan --</option>
+                    <option value="Self-employed">Wiraswasta</option>
+                    <option value="Private">TNI/Polri dan sebagainya</option>
+                    <option value="children">Guru dan sebagainya</option>
+                    <option value="Govt_job">PNS/Pemerintahan</option>
+                    <option value="Never_worked">Tidak Bekerja</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="hipertensi">Wilayah Tempat Tinggal</label>
+                  <select class="custom-select" id="residence" name="residence">
+                    <option selected>-- Pilih Wilayah Tempat Tinggal --</option>
+                    <option value="Urban">Perdesaan</option>
+                    <option value="Rural">Perkotaan</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="gd">Gula Darah</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="glucose"
+                    name="glucose"
+                    placeholder="Masukkan Gula Darah"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="bmi">BMI</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="bmi"
+                    name="bmi"
+                    placeholder="Body Mass Index (BMI)"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="hipertensi">Status Perokok</label>
+                  <select class="custom-select" id="smoking" name="smoking">
+                    <option selected value="Unknown">
+                      -- Pilih Status Perokok --
+                    </option>
+                    <option value="never_smoked">Tidak Pernah Merokok</option>
+                    <option value="formerly_smoked">Perokok Aktif</option>
+                    <option value="smokes">Perokok Pasif</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn" type="submit">Prediksi</button>
+                </div>
+                <!-- end col-->
+              </form>
+
+              <div class="hasil">
+                <h5>{{prediction_text}}</h5>
+              </div>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+      </section>
+    </main>
+
+{% endblock %}
+</html>

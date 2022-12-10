@@ -1,0 +1,39 @@
+{% extends 'layouts/base.html' %} {% block title %}Instroke-X-ray{% endblock %}
+{% block content %}
+
+<main>
+  <section class="bmi-section" id="bmi-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="title">X-Ray Scan Pneumonia</h1>
+          <p>
+            Pemeriksaan x-ray atau rontgen adalah salah satu teknik pencitraan
+            medis menggunakan radiasi sinar X untuk melihat gambar organ dalam
+            tubuh. Prosedur ini merupakan bagian dari pemeriksaan penunjang
+            untuk membantu dokter dalam menentukan diagnosis.
+          </p>
+          <form action="/xray" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="usia">Masukkan CT Scan</label>
+              <input type="file" class="form-control" id="pwd" name="xray" />
+            </div>
+            <div class="col-12">
+              <button class="btn" type="submit">Prediksi</button>
+            </div>
+            <!-- end col-->
+          </form>
+
+          <div class="hasil">
+            <br />
+            <h5><b>{{prediction}}</b></h5>
+            <h4><b>{{confidence}}</b></h4>
+          </div>
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+  </section>
+</main>
+{% endblock %}

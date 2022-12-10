@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Aleo', serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  overflow: auto;
+}
+
+nav {
+  display: flex;
+  background-color: rgba(84, 180, 53, 1);
+  color: #ffeeaf;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul,
+li {
+  display: inline-block;
+  padding: 15px;
+}
+
+nav a {
+  font-size: 23px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffeeaf;
+}
+
+nav a:hover {
+  color: #e1ffee;
+}
+
+.menu {
+  display: none;
+}
+
+.menu-line {
+  width: 20px;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 4px;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  top: 0;
+}
+.container-dashboard {
+  display: flex;
+  width: 100%;
+}
+
+.container-dashboard img {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.dashboard-content {
+  height: 550px;
+  width: 100%;
+}
+.header-title {
+  font-size: 50px;
+  color: rgba(84, 180, 53, 1);
+  margin-top: 20px;
+}
+.dashboard-content p {
+  color: rgba(84, 180, 53, 1);
+  font-size: 23px;
+  margin-top: 80px;
+}
+.btn-buy {
+  margin: 80px 0 0 0;
+  font-size: 23px;
+  color: #ffeeaf;
+  background-color: rgba(84, 180, 53, 1);
+  border: 1px solid rgba(84, 180, 53, 1);
+  width: 250px;
+  height: 70px;
+  border-radius: 20px;
+}
+.btn-buy:hover {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 520px) {
+  nav {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .navbar .container-icon,
+  h3 {
+    height: 50px;
+    padding-top: 3px;
+  }
+
+  .navbar .container-item {
+    width: 100%;
+  }
+
+  nav ul {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    display: none;
+  }
+
+  nav li {
+    display: block;
+    border-top: 1px solid white;
+  }
+
+  .image-logo {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .container-dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-buy {
+    width: 200px;
+    height: 60px;
+  }
+}

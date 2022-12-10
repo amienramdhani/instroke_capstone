@@ -1,0 +1,67 @@
+{% extends 'layouts/base.html' %} {% block title %}Instroke-BMI{% endblock %} {%
+block content %}
+
+<main>
+  <section class="bmi-section" id="bmi-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="title">BMI</h1>
+          <p>
+            Indeks massa tubuh atau indeks Quetelet merupakan proksi heuristik
+            untuk lemak tubuh manusia berdasarkan berat badan seseorang dan
+            tinggi. IMT tidak benar-benar mengukur persentase lemak tubuh. Itu
+            ditemukan antara tahun 1830 dan 1850 oleh polymath asal Belgia
+            Adolphe Quetelet selama pengembangan "fisika sosial".
+          </p>
+          <form action="/bmi" method="POST">
+            <div class="form-group">
+              <label for="usia">Usia</label>
+              <input
+                type="number"
+                class="form-control"
+                id="usia"
+                placeholder="tahun"
+              />
+            </div>
+            <div class="form-group">
+              <label for="berat">Berat Badan</label>
+              <input
+                type="number"
+                class="form-control"
+                id="berat"
+                name="berat"
+                placeholder="kg"
+              />
+            </div>
+            <div class="form-group">
+              <label for="tinggi">Tinggi Badan</label>
+              <input
+                type="number"
+                class="form-control"
+                id="tinggi"
+                name="tinggi"
+                placeholder="cm"
+              />
+            </div>
+
+            <div class="col-12">
+              <button class="btn" type="submit">Hitung</button>
+            </div>
+            <!-- end col-->
+          </form>
+
+          <div class="hasil">
+            <h5>
+              Hasil Score {{ Bmi }} <br />
+              {{bmi_text }}
+            </h5>
+          </div>
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+  </section>
+</main>
+{% endblock %}

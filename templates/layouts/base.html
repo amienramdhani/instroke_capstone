@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- styles -->
+    {% include 'includes/styles.html' %} {% block stylesheets %}{% endblock %}
+  </head>
+
+  <body>
+    <!-- Navbar Section Begin -->
+    {% include 'includes/navbar.html' %}
+    <!-- Navbar End -->
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer Section Begin -->
+    {% include 'includes/footer.html' %}
+    <!-- Footer End -->
+
+    <!-- JavaScript -->
+    {% include 'includes/script.html' %} {% block javascripts %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,207 @@
+{% extends 'layouts/base.html' %} {% block title %}Instroke{% endblock %} {%
+block content %}
+<main>
+  <!-- start HERO -->
+  <section class="hero-container" id="beranda">
+    <div class="container">
+      <div class="row group-item">
+        <div class="col-lg-6 order-1">
+          <div class="hero-image pt-5">
+            <div class="image">
+              <img
+                src="../static/img/brain.png"
+                class="img-fluid"
+                style="width: 700px"
+              />
+            </div>
+            <!-- end image -->
+          </div>
+          <!-- end hero-image -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-lg-6 order-2">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="title">Instroke-Periksa Resiko Penyakit Stroke</h1>
+              <p class="text">
+                Memprediksi Kemungkinan terkena Resiko Serangan Stroke
+              </p>
+              <p class="text"></p>
+            </div>
+            <div class="hero-button text-center">
+              <a href="{{ url_for('predictive') }}" class="btn btn-success mt-4"
+                >Periksa Sekarang</a
+              >
+            </div>
+          </div>
+          <!-- end hero-content -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- END row-->
+    </div>
+    <!-- END container-->
+  </section>
+  <!-- END HERO -->
+
+  <section class="cara-kerja" id="cara-kerja">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-sm-12">
+          <div class="section-title">
+            <h1 class="title">Fitur Instroke</h1>
+          </div>
+          <!-- end section title -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+
+      <div class="row group-item">
+        <div class="col-md-6 col-sm-12">
+          <div class="single-item" data-aos="flip-left">
+            <a href="{{ url_for('predictive') }}"
+              ><img src="../static/img/brain2.png" alt=""
+            /></a>
+            <h4>Stroke Prediction</h4>
+            <p>Fitur untuk memprediksi resiko terjadinya serangan stroke</p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-md-6 col-sm-12">
+          <div class="single-item" data-aos="flip-down">
+            <a href="{{ url_for('bmi') }}"
+              ><img src="../static/img/bmi.png" alt=""
+            /></a>
+            <h4>Penghitungan Body Mass Index (BMI)</h4>
+            <p>Fitur untuk menghitung Body Mass Index (BMI)</p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+      </div>
+    </div>
+  </section>
+
+  <section class="information-section">
+    <div class="container">
+      <div class="row group-item information">
+        <div class="col-lg-4 col-md-12" data-aos="zoom-in-left">
+          <img src="../static/img/stroke.png" />
+        </div>
+        <!-- end col -->
+        <div class="col-lg-8 col-md-12 text" data-aos="zoom-in-right">
+          <h1>Instroke Application</h1>
+          <p>
+            Instroke memanfaatkan teknologi machine learning untuk mendeteksi
+            resiko terkena serangan stroke untuk mendapatkan akurasi yang akurat
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fitur" id="fitur">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-sm-12">
+          <div class="section-title">
+            <h1 class="title">Artikel Mengenai Stroke</h1>
+          </div>
+          <!-- end section title -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+
+      <div class="row group-item">
+        <div class="col-md-6 col-sm-12">
+          <div class="single-item" data-aos="fade-left">
+            <a
+              href="https://p2ptm.kemkes.go.id/infographic-p2ptm/stroke/tips-mencegah-penyakit-stroke"
+            >
+              <img
+                src="https://p2ptm.kemkes.go.id/uploads//TmQwU05BQS9YYlJpanB5VnNtRldFUT09/7_Agustus_06.png"
+                alt="stroke"
+              />
+            </a>
+            <h4>Tips Mencegah Stroke</h4>
+            <p>Berikut ini beberapa tips untuk mencegah serangan stroke</p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-md-6 col-sm-12">
+          <div class="single-item" data-aos="fade-left">
+            <a
+              href="https://www.halodoc.com/artikel/hati-hati-7-keluhan-ini-bisa-menandai-stroke-ringan"
+            >
+              <img
+                src="https://d1bpj0tv6vfxyp.cloudfront.net/articles/79110f2e-b3f3-46c5-b4fd-4d7275124971_article_image_url.webp"
+                alt=""
+              />
+            </a>
+            <h4>Gejala Serangan Stroke</h4>
+            <p>Berikut beberapa gejala terjadinya serangan stroke</p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+      </div>
+    </div>
+  </section>
+
+  <section class="cara-kerja-form" id="cara-kerja">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-sm-12">
+          <div class="section-title">
+            <h1 class="title">Cara Kerja Instroke</h1>
+          </div>
+          <!-- end section title -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+
+      <div class="row group-item">
+        <div class="col-md-4 col-sm-12">
+          <div class="single-item" data-aos="fade-up-right">
+            <img src="../static/img/task.png" alt="" />
+            <h4>Mengisi Form</h4>
+            <p>Mengisi form untuk kebutuhan prediksi stroke</p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-md-4 col-sm-12">
+          <div class="single-item" data-aos="fade-up-right">
+            <img src="../static/img/search.png" alt="" />
+            <h4>Proses Prediksi Stroke</h4>
+            <p>Sistem akan memprediksi hasil data yang telah dimasukkan</p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-md-4 col-sm-12">
+          <div class="single-item" data-aos="fade-up-right">
+            <img src="../static/img/result.png" alt="" />
+            <h4>Hasil Prediksi Stroke</h4>
+            <p>
+              Sistem memberikan hasil Prediksi resiko terkena serangan stroke
+            </p>
+          </div>
+          <!-- end single-item -->
+        </div>
+        <!-- end col -->
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

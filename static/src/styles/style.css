@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: normal 400 16px 'Aleo', serif;
+  color: #454545;
+}
+
+.navbar-toggler:focus,
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+  outline: none !important;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+hr {
+  margin: 0;
+  border: 0.1px solid #dcdcdc;
+}
+
+main {
+  padding-top: 30px;
+}
+
+.section-title {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.group-item {
+  padding: 50px 0;
+}
+
+/*===========================
+        02. NAVBAR 
+===========================*/
+.navbar-area {
+  background-color: #54b435;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.navbar-area .navbar {
+  padding: 10px 0;
+}
+
+.navbar-area .navbar a > h2 {
+  padding-top: 10px;
+  color: #fff;
+}
+
+.navbar-area .navbar .navbar-toggler .toggler-icon {
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin: 5px 0;
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.navbar-area.sticky .navbar .navbar-toggler .toggler-icon {
+  background-color: #fff;
+}
+
+.navbar-area .navbar .navbar-toggler.active .toggler-icon:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 7px;
+}
+
+.navbar-area .navbar .navbar-toggler.active .toggler-icon:nth-of-type(2) {
+  opacity: 0;
+}
+
+.navbar-area .navbar .navbar-toggler.active .toggler-icon:nth-of-type(3) {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: -7px;
+}
+
+@media (max-width: 991px) {
+  .navbar-area .navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #54b435;
+    z-index: 8;
+    padding: 10px 0;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
+    box-shadow: 0px 10px 25px 0px rgba(18, 18, 18, 0.05);
+  }
+}
+
+.navbar-area.sticky .navbar .navbar-collapse {
+  background-color: #fff;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item {
+  margin-left: 40px;
+  position: relative;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item a {
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: 500;
+  opacity: 0.8;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .navbar-area .navbar .navbar-nav .nav-item a {
+    padding: 10px 0;
+    display: block;
+  }
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.active > a,
+.navbar-area .navbar .navbar-nav .nav-item:hover > a {
+  color: #fff;
+  opacity: 1;
+}
+
+.navbar-area .navbar .navbar-nav .nav-item.active > a::before,
+.navbar-area .navbar .navbar-nav .nav-item:hover > a::before {
+  -webkit-transform: translate(-50%) scaleX(1);
+  -moz-transform: translate(-50%) scaleX(1);
+  -ms-transform: translate(-50%) scaleX(1);
+  -o-transform: translate(-50%) scaleX(1);
+  transform: translate(-50%) scaleX(1);
+}
+
+/*===========================
+03. HERO 
+===========================*/
+.hero-container {
+  background-color: #ffffff;
+  height: 600px;
+}
+
+.hero-image .image {
+  text-align: center;
+}
+
+.hero-image .image img {
+  width: 90%;
+}
+
+@media (max-width: 991px) {
+  .hero-image .image {
+    padding-bottom: 10px;
+  }
+
+  .hero-image .image img {
+    width: 70%;
+  }
+}
+
+.hero-content {
+  padding-top: 150px;
+}
+
+.hero-content a {
+  font-size: 20px;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+
+@media (max-width: 1199px) {
+  .hero-content {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 30px;
+  }
+
+  .hero-content .title {
+    font-size: 46px;
+  }
+}
+
+.hero-content .text {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.hero-content .custom-file {
+  margin-bottom: 10px;
+}
+
+.hero-content button {
+  height: 2.35rem;
+}
+
+.hero-content small > span {
+  color: #5896c0;
+  cursor: pointer;
+}
+
+/*===========================
+04. INFORMATION 
+===========================*/
+.information-section {
+  background-color: #425f57;
+}
+
+.information {
+  background-color: #425f57;
+  height: 400px;
+}
+
+.information img {
+  width: 350px;
+  height: 300px;
+  margin-right: 30px;
+}
+
+.information p {
+  font-size: 20px;
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+.information h1 {
+  color: #ffffff;
+  margin-top: 80px;
+}
+
+@media (max-width: 1199px) {
+  .information h1 {
+    font-size: 46px;
+  }
+
+  @media (max-width: 768px) {
+    .information {
+      text-align: center;
+    }
+
+    .information img {
+      margin: 0;
+      padding-bottom: 20px;
+    }
+
+    .information .text {
+      margin: 0;
+    }
+
+    .information h1 {
+      font-size: 40px;
+    }
+  }
+}
+
+.single-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff;
+  height: 400px;
+}
+
+.single-item img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.single-item h4 {
+  margin-top: 15px;
+}
+
+.single-item p {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-item p {
+    font-size: 16px;
+  }
+}
+
+.keluhan button {
+  padding: 0.5rem 2rem;
+  margin-top: 20px;
+}
+
+.sign {
+  background-color: #fff;
+  height: 40px;
+  margin: 50px 0 20px;
+}
+
+.sign ol {
+  background-color: #fff;
+}
+
+.sign ol li a {
+  color: #19140f;
+  font-weight: 600;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.result img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.result .result-text h4 {
+  font-weight: 500;
+}
+
+.result .result-text h2 {
+  padding: 10px 0;
+}
+
+.information-text {
+  padding: 30px 0;
+}
+
+.tentang {
+  height: 600px;
+}
+
+footer {
+  background-color: #54b435;
+  height: 100px;
+}
+
+footer .text-footer {
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: center;
+  font-size: 20px;
+}
+
+.bmi-section {
+  padding: 100px;
+}
+
+.bmi-section form {
+  padding: 30px 0;
+}
+
+.bmi-section button {
+  margin-top: 10px;
+  padding: 10px 48%;
+  background-color: #54b435;
+  color: #fff;
+}
+
+.bmi-section .hasil {
+  height: 400px;
+  background-color: #425f57;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.bmi-section .hasil h5 {
+  text-align: center;
+  padding-top: 15%;
+}
+.bmi-section .hasil h4 {
+  text-align: center;
+}
