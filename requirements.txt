@@ -1,0 +1,10 @@
+pandas
+numpy
+pillow
+gunicorn
+flask
+numpy
+tensorflow
+sklearn
+pickle
+os
