@@ -116,6 +116,10 @@ nav a:hover {
     height: 50px;
     padding-top: 3px;
   }
+  
+  .title h1{
+    margin-top:25px;
+  }
 
   .navbar .container-item {
     width: 100%;
