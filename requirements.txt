@@ -6,4 +6,3 @@ flask
 tensorflow
 sklearn
 pickle4
-os
