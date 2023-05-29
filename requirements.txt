@@ -4,5 +4,4 @@ pillow
 gunicorn
 flask
 tensorflow
-sklearn
 pickle4
