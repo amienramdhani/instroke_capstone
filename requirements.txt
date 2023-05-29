@@ -3,8 +3,7 @@ numpy
 pillow
 gunicorn
 flask
-numpy
 tensorflow
 sklearn
-pickle
+pickle4
 os
